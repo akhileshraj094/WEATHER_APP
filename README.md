@@ -1,5 +1,6 @@
-Weather app with API from [openweathermap](https://openweathermap.org/).  
-Project initialized using npx react-native init.
+[Weather App - Weathery](https://www.youtube.com/watch?v=kh5abZc5d60)
+
+Project initialized using `npx react-native init` and uses [openweathermap](https://openweathermap.org/) api.
 
 [Design Inspiration](https://www.behance.net/gallery/138332467/Weather-App?tracking_source=search_projects%7Cweather+app)
 
