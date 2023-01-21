@@ -23,8 +23,6 @@ export const getCurrentWeather = createAsyncThunk(
       const state = getState();
       const baseURL = 'https://api.openweathermap.org/data/2.5';
 
-      console.log(API_ID);
-
       const cityAPIResponse = await axios.get(
         `${baseURL}/forecast?q=${cityName}&units=metric&appid=${API_ID}`,
       );
