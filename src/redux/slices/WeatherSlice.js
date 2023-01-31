@@ -67,10 +67,10 @@ export const getDeviceCity = createAsyncThunk(
           dispatch(updateCurrentLocation(response?.data?.name));
           dispatch(getCurrentWeather({cityName: response?.data?.name}));
         } catch (err) {
+          RNBootSplash.hide();
+
           // This shows toast for api call error.
           dispatch(updateError(err?.response?.data || 'Current City Error'));
-
-          RNBootSplash.hide();
         }
       },
       // This is alert for permission error.
