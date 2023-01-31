@@ -46,7 +46,7 @@ export const showError = error => {
     case 403:
       Alert.alert(
         'Permission Error',
-        error.message + ' Cannot search for the current city.',
+        error.message,
         [
           {
             text: 'Ok',
