@@ -1,4 +1,4 @@
-[Weather App - Weathery](https://www.youtube.com/watch?v=kh5abZc5d60)
+[Weather App - Weathery](https://www.youtube.com/watch?v=MiDxQqfvBuY&t=8s)
 
 Project initialized using `npx react-native init` and uses [openweathermap](https://openweathermap.org/) api.
 
