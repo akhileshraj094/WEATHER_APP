@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Geolocation from '@react-native-community/geolocation';
+import Geolocation from 'react-native-geolocation-service';
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import RNBootSplash from 'react-native-bootsplash';
 import {API_ID} from '@env';
@@ -52,7 +52,7 @@ export const getCurrentWeather = createAsyncThunk(
 
 export const getDeviceCity = createAsyncThunk(
   'get/deviceCity',
-  (_, {dispatch}) => {
+  async (_, {dispatch}) => {
     const baseURL = 'https://api.openweathermap.org/data/2.5';
 
     Geolocation.getCurrentPosition(
@@ -75,8 +75,8 @@ export const getDeviceCity = createAsyncThunk(
       },
       // This is alert for permission error.
       error => {
+        RNBootSplash.hide();
         showError({cod: 403, message: error.message});
-
         dispatch(getCurrentWeather({cityName: 'London'}));
       },
     );
