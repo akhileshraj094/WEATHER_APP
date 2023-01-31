@@ -1,12 +1,18 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {View, ScrollView, RefreshControl} from 'react-native';
+import {
+  View,
+  ScrollView,
+  RefreshControl,
+  PermissionsAndroid,
+} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 import LinearGradient from 'react-native-linear-gradient';
+import RNBootSplash from 'react-native-bootsplash';
 import moment from 'moment';
 import {Colors, showError} from '@app/constants';
 import {DataLoader} from '@app/commons';
 import {HomeTopContent, HomeBotContent} from './components';
-import {getDeviceCity} from '@app/redux';
+import {getCurrentWeather, getDeviceCity} from '@app/redux';
 import {HomeStyles as Styles} from '@app/assets/styles';
 
 const wait = timeout => {
@@ -40,7 +46,26 @@ export default function Home({navigation}) {
     .format('ddd, MMM D');
 
   useEffect(() => {
-    dispatch(getDeviceCity());
+    const permissionRequest = async () => {
+      try {
+        const granted = await PermissionsAndroid.request(
+          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        );
+
+        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+          dispatch(getDeviceCity());
+        } else {
+          RNBootSplash.hide();
+          dispatch(getCurrentWeather({cityName: 'Pokhara'}));
+          alert('Location permission denied');
+        }
+      } catch (err) {
+        RNBootSplash.hide();
+        alert(err);
+      }
+    };
+
+    permissionRequest();
   }, []);
 
   useEffect(() => {
