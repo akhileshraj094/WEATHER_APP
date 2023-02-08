@@ -1,4 +1,4 @@
-# Weathery
+# [Weathery](<(https://www.youtube.com/watch?v=MiDxQqfvBuY&t=8s)>)
 
 A weather app built using React Native CLI for android on Ubuntu.  
 Uses the [openweathermap](https://openweathermap.org/) api for fetching weather data.  
@@ -11,7 +11,6 @@ Design inspired from [here](https://www.behance.net/gallery/138332467/Weather-Ap
 - [Editor Setup](#editor-setup)
 - [Development Setup](#development-setup)
 - [App Screenshots](#app-screenshots)
-- [App Recording](https://www.youtube.com/watch?v=MiDxQqfvBuY&t=8s)
 
 # App Functions
 
