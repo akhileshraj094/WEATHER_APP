@@ -11,6 +11,7 @@ Design inspired from [here](https://www.behance.net/gallery/138332467/Weather-Ap
 - [Editor Setup](#editor-setup)
 - [Development Setup](#development-setup)
 - [App Screenshots](#app-screenshots)
+- [App Recording](https://www.youtube.com/watch?v=MiDxQqfvBuY&t=8s)
 
 # App Functions
 
