@@ -61,7 +61,7 @@ Run following commands from project root directory to get up and running with de
 
 ### 3. Build the app on android
 
-`npx react-native run android` || `npm run android`
+`npx react-native run-android` || `npm run android`
 
 # App Screenshots
 
