@@ -6,14 +6,14 @@ Design inspired from [here](https://www.behance.net/gallery/138332467/Weather-Ap
 
 # Table of Contents
 
-- [Download APK](#APK)
+- [Download APK](#download)
 - [App functions](#app-functions)
 - [Used API Endpoints](#used-api-endpoints)
 - [Editor Setup](#editor-setup)
 - [Development Setup](#development-setup)
 - [App Screenshots](#app-screenshots)
 
-# Download  
+# Download
 
 Try out the app on [Android](https://drive.google.com/drive/folders/1-l6atoPG8XsMvlC0jvdQESU3o6iR03by?usp=sharing). Latest version is the one with highest number.
 
